@@ -190,8 +190,8 @@ def main(args):
     ], weight_decay=WEIGHT_DECAY)
     
     # Learning rate scheduler
-    scheduler = optim.lr_scheduler. ReduceLROnPlateau(
-        optimizer, mode='min', factor=0. 5, patience=3, verbose=True
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, mode='min', factor=0.5, patience=3, verbose=True
     )
     
     # Early stopping
@@ -261,7 +261,7 @@ def main(args):
         if epoch > 0:
             if val_loss > train_loss * 1.5:
                 print(f"   ⚠️  WARNING: Possible overfitting (val_loss >> train_loss)")
-            elif train_loss > 3. 0 and val_loss > 3.0:
+            elif train_loss > 3.0 and val_loss > 3.0:
                 print(f"   ⚠️  WARNING: Possible underfitting (both losses high)")
         
         # Save checkpoint

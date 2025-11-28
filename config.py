@@ -62,7 +62,7 @@ MAX_CAPTION_LENGTH = 30
 # ============================================================================
 IMAGE_SIZE = 256  # Resize short side to this
 CROP_SIZE = 224   # Center/random crop to this (ResNet50 input)
-NORMALIZE_MEAN = [0.485, 0. 456, 0.406]  # ImageNet statistics
+NORMALIZE_MEAN = [0.485, 0.456, 0.406]  # ImageNet statistics
 NORMALIZE_STD = [0.229, 0.224, 0.225]
 
 # ============================================================================

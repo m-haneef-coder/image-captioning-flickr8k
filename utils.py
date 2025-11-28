@@ -73,7 +73,7 @@ class EarlyStopping:
         self.counter = 0
         self.best_score = None
         self.early_stop = False
-        self.val_loss_min = np. Inf
+        self.val_loss_min = np.inf
         
     def __call__(self, val_loss, model):
         """
@@ -130,8 +130,8 @@ def plot_training_curves(train_losses, val_losses, save_path='training_curves.pn
     best_val_epoch = np.argmin(val_losses) + 1
     best_val_loss = min(val_losses)
     plt.annotate(f'Best Val Loss: {best_val_loss:.4f}',
-                xy=(best_val_epoch, best_val_loss),
-                xytext=(best_val_epoch + 1, best_val_loss + 0.2),
+                xy=(float(best_val_epoch), float(best_val_loss)),
+                xytext=(float(best_val_epoch + 1), float(best_val_loss + 0.2)),
                 arrowprops=dict(arrowstyle='->', color='red', lw=2),
                 fontsize=10, color='red')
     

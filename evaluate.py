@@ -68,7 +68,7 @@ def calculate_bleu_scores(references, hypotheses):
         
         bleu1 = corpus_bleu(ref_tokens, hyp_tokens, weights=(1, 0, 0, 0))
         bleu2 = corpus_bleu(ref_tokens, hyp_tokens, weights=(0.5, 0.5, 0, 0))
-        bleu3 = corpus_bleu(ref_tokens, hyp_tokens, weights=(0. 33, 0.33, 0.33, 0))
+        bleu3 = corpus_bleu(ref_tokens, hyp_tokens, weights=(0.33, 0.33, 0.33, 0))
         bleu4 = corpus_bleu(ref_tokens, hyp_tokens, weights=(0.25, 0.25, 0.25, 0.25))
         
         return {
@@ -104,7 +104,7 @@ def calculate_meteor_score(references, hypotheses):
         return np.mean(scores)
     except Exception as e:
         print(f"⚠️  Error calculating METEOR: {e}")
-        return 0. 0
+        return 0.0
 
 
 def print_sample_captions(model, dataloader, vocab, device, num_samples=5):
